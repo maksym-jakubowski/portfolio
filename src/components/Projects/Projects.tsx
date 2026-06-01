@@ -1,58 +1,65 @@
-import { ArrowRight } from "lucide-react";
-import { SquareCheck, ChartNoAxesCombined, Sparkles } from "lucide-react";
+// import { ArrowRight } from "lucide-react";
+import { ChartNoAxesCombined, Sparkles, SquareCheck } from "lucide-react";
+import { useTranslation } from "react-i18next";
+
 import ProjectCard from "./ProjectCard";
 
-const projectsData = [
-  {
-    title: "Task Manager App",
-    description:
-      "Fullstack task management application with kanban board, team workspace and real-time updates.",
-    tags: ["React", "Node.js", "TypeScript", "PostgreSQL", "Socket.io"],
-    image: "/project1-icon.png", // ścieżka do Twojego screena
-    color: "#594afb", // kolor ikonki w rogu
-    liveLink: "#",
-    githubLink: "#",
-    icon: SquareCheck,
-  },
-  {
-    title: "AI Content Generator",
-    description:
-      "AI-Powered application for generating marketing content, product descriptions and social media posts.",
-    tags: ["React", "Node.js", "OpenAI API", "PostgreSQL", "TailWind CSS"],
-    image: "/project2-icon.png", // ścieżka do Twojego screena
-    color: "#45937a", // kolor ikonki w rogu
-    liveLink: "#",
-    githubLink: "#",
-    icon: Sparkles,
-  },
-  {
-    title: "Analytics Dashboard",
-    description:
-      "Dashboard for data visualisation and analysis with charts, filters and CSV data import.",
-    tags: ["React", "Node.js", "Recharts", "PostgreSQL", "CSV"],
-    image: "/project3-icon.png", // ścieżka do Twojego screena
-    color: "#4d8cf0", // kolor ikonki w rogu
-    liveLink: "#",
-    githubLink: "#",
-    icon: ChartNoAxesCombined,
-  },
-];
-
 const Projects = () => {
+  const { t } = useTranslation();
+
+  const projectsData = [
+    {
+      title: "Task Manager App",
+      description: t("projects.project1"),
+      tags: ["React", "Node.js", "TypeScript", "PostgreSQL", "Socket.io"],
+      imageLight: "/project1-icon-light.png",
+      imageDark: "/project1-icon-dark.png",
+      color: "#594afb",
+      liveLink: "http://task-app.maksym-jakubowski.pl/",
+      githubLink: "https://github.com/maksym-jakubowski/task-management-app",
+      icon: SquareCheck,
+    },
+    {
+      title: "AI Content Generator",
+      description: t("projects.project2"),
+      tags: ["React", "Node.js", "OpenAI API", "PostgreSQL", "TailWind CSS"],
+      imageLight: "/project2-icon-light.png",
+      imageDark: "/project2-icon-dark.png",
+      color: "#45937a",
+      liveLink: "#",
+      githubLink: "#",
+      icon: Sparkles,
+      isBeingBuild: true,
+    },
+    {
+      title: "Chat App",
+      description: t("projects.project3"),
+      tags: ["React", "Node.js", "Recharts", "PostgreSQL", "CSV", "Supabase"],
+      imageLight: "/project3-icon-light.png",
+      imageDark: "/project3-icon-dark.png",
+      color: "#4d8cf0",
+      liveLink: "#",
+      githubLink: "#",
+      icon: ChartNoAxesCombined,
+      isBeingBuild: true,
+    },
+  ];
+
   return (
-    <section className="my-work w-full">
-      <div className="container text-left px-6 py-6">
-        <h2 className="text-indigo-400 font-medium tracking-wide text-sm">
-          MY WORK
-        </h2>
-        <div className="lg:grid-cols-2 gap-4 justify-between flex items-center mb-3">
-          <h3 className="text-m font-semibold text-white">Featured Projects</h3>
+    <section id="projects" className="my-work w-full">
+      <div className="container text-center md:text-left py-6">
+        <h5 className="t-primary">{t("projects.my_work")}</h5>
+        <div className="lg:grid-cols-2 gap-4 justify-center md:justify-between flex items-center mb-3">
+          <h4>{t("projects.featured_projects")}</h4>
+
+          {/* Future button for all projects
           <button className="flex items-center text-xs gap-2 border border-slate-700 bg-slate-900/40 text-white px-6 py-2 rounded-l font-semibold transition-all hover:bg-slate-800 active:scale-95">
             View all projects <ArrowRight size={20} />
           </button>
+          */}
         </div>
 
-        {/* Grid projektów */}
+        {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {projectsData.map((p, index) => (
             <ProjectCard key={index} project={p} />

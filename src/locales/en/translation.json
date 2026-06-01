@@ -1,0 +1,44 @@
+{
+  "navbar": {
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "hero": {
+    "hi": "Hi, I'm",
+    "about": "I build modern, scalable web applications with a focus on clean code, performance and great user experience.",
+    "view_projects": "View Projects",
+    "contact_me": "Contact Me",
+    "find_me": "Find me on:"
+  },
+  "projects": {
+    "my_work": "My Work",
+    "featured_projects": "Featured Projects",
+    "project1": "Fullstack task management application with kanban board, team workspace and real-time updates.",
+    "project2": "AI-Powered application for generating marketing content, product descriptions and social media posts.",
+    "project3": "Modern chat application with real-time messaging, responsive interface and seamless user communication.",
+    "currently_building": "Currently Building"
+  },
+  "about_me": {
+    "about_me": "About Me",
+    "header": "Passionate about building \n things for the web",
+    "text1": "I'm a fullstack developer with a strong focus on React and Node.js. I enjoy turning ideas into real that solve problems and deliver value.",
+    "text2": "I'm continuously learning new technologies and improving my skills to build better applications.",
+    "download_cv": "Download CV",
+    "technologies": "Technologies"
+  },
+  "contact": {
+    "header": "Get in touch",
+    "header2": "Let's work together!",
+    "text": "I'm currently open to new opportunities. \nFeel free to reach out!",
+    "location": "Location",
+    "poland": "Poland",
+    "lets_connect": "Let's Connect"
+  },
+  "footer": {
+    "copyrights": "Maksym Jakubowski. All rights reserved.",
+    "built_with": "Built with ❤️ using <bold>React & Tailwind CSS</bold>"
+  }
+}

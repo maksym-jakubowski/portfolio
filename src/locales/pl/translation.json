@@ -1,0 +1,44 @@
+{
+  "navbar": {
+    "home": "Home",
+    "projects": "Projekty",
+    "about": "O Mnie",
+    "skills": "Skills",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "hi": "Cześć, tu",
+    "about": "Tworzę nowoczesne, skalowalne aplikacje webowe, stawiając na czysty kod, wydajność i świetne doświadczenie użytkownika.",
+    "view_projects": "Projekty",
+    "contact_me": "Kontakt",
+    "find_me": "Znajdź mnie tutaj:"
+  },
+  "projects": {
+    "my_work": "Moje Prace",
+    "featured_projects": "Wyróżnione Projekty",
+    "project1": "Aplikacja fullstack do zarządzania zadaniami z tablicą kanban, przestrzenią zespołową i aktualizacjami w czasie rzeczywistym.",
+    "project2": "Aplikacja oparta na AI do generowania treści marketingowych, opisów produktów i postów na media społecznościowe.",
+    "project3": "Nowoczesna aplikacja czatu z wiadomościami w czasie rzeczywistym, responsywnym interfejsem i płynną komunikacją użytkowników.",
+    "currently_building": "W trakcie budowy"
+  },
+  "about_me": {
+    "about_me": "O mnie",
+    "header": "Pasjonuję się tworzeniem\nnowoczesnych aplikacji webowych",
+    "text1": "Jestem fullstack developerem ze szczególnym naciskiem na React i Node.js. Lubię zamieniać pomysły w realne rozwiązania, które rozwiązują problemy i dostarczają wartość użytkownikom.",
+    "text2": "Nieustannie rozwijam swoje umiejętności i poznaję nowe technologie, aby tworzyć jeszcze lepsze aplikacje.",
+    "download_cv": "Pobierz CV",
+    "technologies": "Technologie"
+  },
+  "contact": {
+    "header": "Skontaktuj się ze mną",
+    "header2": "Stwórzmy coś razem!",
+    "text": "Obecnie jestem otwarty na nowe możliwości.\nSkontaktuj się ze mną!",
+    "location": "Lokalizacja",
+    "poland": "Polska",
+    "lets_connect": "Sociale"
+  },
+  "footer": {
+    "copyrights": "Maksym Jakubowski. Wszelkie prawa zastrzeżone.",
+    "built_with": "Stworzone z ❤️ przy użyciu <bold>React i Tailwind CSS</bold>"
+  }
+}

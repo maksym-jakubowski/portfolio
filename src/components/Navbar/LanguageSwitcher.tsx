@@ -1,31 +1,28 @@
-import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const LanguageSwitcher = () => {
-  const [language, setLanguage] = useState("EN");
-
-  const languages = ["EN", "PL"];
+  const languages = ["en", "pl"];
+  const { i18n } = useTranslation();
+  const currentLang = i18n.resolvedLanguage?.split("-")[0];
 
   return (
-    <div className="flex items-center justify-center bg-slate-950 text-xs">
-      {" "}
-      {/* Tło tylko dla podglądu */}
-      <div className="relative flex bg-slate-900/50 rounded-full p-1 w-fit">
-        {/* Ruchome tło (akcent) */}
+    <div className="flex items-center justify-center text-sm">
+      <div className="relative flex bg--surface rounded-full p-1 w-fit">
         <div
-          className={`absolute top-1 bottom-1 left-1 w-[calc(50%-4px)] bg-slate-800/80 rounded-full transition-transform duration-300 ease-in-out ${
-            language === "PL" ? "translate-x-full" : "translate-x-0"
+          className={`absolute top-1 bottom-1 left-1 w-[calc(50%-4px)] rounded-full transition-transform duration-300 ease-in-out bg-slate-200 dark:bg-slate-800 ${
+            currentLang === "pl" ? "translate-x-full" : "translate-x-0"
           }`}
         />
 
-        {/* Przyciski */}
+        {/* pl / en buttons */}
         {languages.map((lang) => (
           <button
             key={lang}
-            onClick={() => setLanguage(lang)}
-            className={`relative z-10 px-4 py-1.5 font-semibold transition-colors duration-300 flex flex-col items-center ${
-              language === lang
-                ? "text-indigo-400"
-                : "text-slate-200 hover:text-indigo-400"
+            onClick={() => i18n.changeLanguage(lang)}
+            className={`relative uppercase z-10 px-4 py-1.5 font-semibold transition-colors duration-300 flex flex-col items-center cursor-pointer   ${
+              currentLang === lang
+                ? "t-primary"
+                : " hover:text-primary dark:hover:text-dark-primary"
             }`}
           >
             {lang}
